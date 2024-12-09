@@ -8,8 +8,9 @@ int game_descriptorMaterialId = 0;
 const char * i_Mtl_Tag(Material * mMtl){
    static char mtlBuffer[1024];
     if(mMtl->MtlPtr.LoadMtl(mMtl) == true){
-
+      printf("%c", i_Mtl_Tag);
     };
+ return mtlBuffer;
 };
 
 #endif
