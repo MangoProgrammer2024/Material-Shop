@@ -53,9 +53,15 @@ public:
     //material info * binary data
     void MtlInfo();
 
-
-
-
+   /*
+   
+      MATERIAL OTHER PREFERENCES
+                  |
+                 \|/
+   */
+   float g_mtlTransparencyAlpha;
+   float g_mtl_LibArray[4][4][4];
+   float g_mtlRgb[3][3][3];
 
 };
 
