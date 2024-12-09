@@ -22,6 +22,19 @@ public:
     }MaterialType;
     //
     //Material Stuff
+    void MtlFile(Material * mtl, const std::string& extension){
+       int i;
+       for(i = 0; i >= 0; i++){
+          extension == "*.gmtl";
+           mtl->MaterialName == ""extension;
+       }
+       printmtlf(MaterialName, MaterialType);
+       return& m;
+    };
+
+
+
+
 
 };
 
