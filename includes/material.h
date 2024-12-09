@@ -22,13 +22,14 @@ public:
     }MaterialType;
     //
     //Material Stuff
+    void * printmtlf(const std::string& Name, enum type);
     void MtlFile(Material * mtl, const std::string& extension){
        int i;
        for(i = 0; i >= 0; i++){
           extension == "*.gmtl";
            mtl->MaterialName == ""extension;
        }
-       printmtlf(MaterialName, MaterialType);
+       
        return& m;
     };
 
