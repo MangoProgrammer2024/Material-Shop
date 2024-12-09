@@ -45,6 +45,17 @@ bool OpenMtl(Material * mtl){
  };
 return mtl->MtlPtr.MtlLoad(mtl);
 };
+/*
+========================
+ MATERIAL FORMAT FAILED
+========================
+*/
+void MtlFormatNull(Material * mtl){
+ if(!mtl->extension != "*.gmtl"){
+  ERROR_MSG_BOX_MTLSHOP("Material Format Not Readable\n");
+ };
+ 
+};
 
 
 
