@@ -28,14 +28,23 @@ const char * i_Mtl_Tag(Material * mMtl){
 void * saveMtl(const std::string& _NAME, enum * _TYPE);
 bool SaveMtl(Material * mtl){
  if(MainWindow::SaveFile.Click()){
-   saveMtl(mtl->MtlPtr.MaterialName, MaterialType);
+    saveMtl(mtl->MtlPtr.MaterialName, MaterialType);
     vfileprintmtl(i_Mtl_Tag, mtl->MtlPtr.MtlFile);
  };
-
  return mtl->MtlPtr.MtlLoad(mtl);
- 
 };
-
+/*
+===============
+ OPEN MATERIAL
+===============
+*/
+void * openMtl(const std::string& mtlFile, const std::string& format);
+bool OpenMtl(Material * mtl){
+ if(MainWindow::OpenFile.Click()){
+   openMtl(mtl->MaterialName, mtl->extension);
+ };
+return mtl->MtlPtr.MtlLoad(mtl);
+};
 
 
 
