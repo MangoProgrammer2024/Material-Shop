@@ -1,9 +1,16 @@
 /*
+==============
  MATERIAL.CPP
+==============
 */
-
+#include "material.h"
+//game descriptor for material id *reads the materials id*
 int game_descriptorMaterialId = 0;
-
+/*
+==============
+ MATERIAL TAG
+==============
+*/
 #ifdef MATERIAL_BUFFER
 const char * i_Mtl_Tag(Material * mMtl){
    static char mtlBuffer[1024];
@@ -12,5 +19,23 @@ const char * i_Mtl_Tag(Material * mMtl){
     };
  return mtlBuffer;
 };
-
 #endif
+/*
+===============
+ SAVE MATERIAL
+===============
+*/
+void * saveMtl(const std::string& _NAME, enum * _TYPE);
+bool SaveMtl(Material * mtl){
+ if(MainWindow::SaveFile.Click()){
+   saveMtl(mtl->MtlPtr.MaterialName, MaterialType);
+    vfileprintmtl(i_Mtl_Tag, mtl->MtlPtr.MtlFile);
+ };
+
+ return mtl->MtlPtr.MtlLoad(mtl);
+ 
+};
+
+
+
+
